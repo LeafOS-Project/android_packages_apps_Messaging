@@ -72,7 +72,7 @@ public abstract class UIIntents {
     // Sending VCard uri to VCard detail activity
     public static final String UI_INTENT_EXTRA_VCARD_URI = "vcard_uri";
 
-    public static final String CMAS_COMPONENT = "com.android.cellbroadcastreceiver";
+    public static final String CMAS_COMPONENT = "com.android.cellbroadcastreceiver.module";
 
     // Intent action for local broadcast receiver for conversation self id change.
     public static final String CONVERSATION_SELF_ID_CHANGE_BROADCAST_ACTION =
@@ -263,16 +263,6 @@ public abstract class UIIntents {
      * @param url display the data in the url to users
      */
     public abstract Intent getViewUrlIntent(final String url);
-
-    /**
-     * Get an intent to launch the ringtone picker
-     * @param title the title to show in the ringtone picker
-     * @param existingUri the currently set uri
-     * @param defaultUri the default uri if none is currently set
-     * @param toneType type of ringtone to pick, maybe any of RingtoneManager.TYPE_*
-     */
-    public abstract Intent getRingtonePickerIntent(final String title, final Uri existingUri,
-            final Uri defaultUri, final int toneType);
 
     /**
      * Get an intent to launch the wireless alert viewer.
